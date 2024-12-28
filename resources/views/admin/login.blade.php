@@ -14,6 +14,9 @@
     <div class="container mx-auto max-w-6xl px-5">
       <div class="flex h-screen items-center justify-center">
         <div class="w-full max-w-sm">
+          <div class="mb-5 flex items-center justify-center">
+            <img class="h-24" src="{{ asset('android-chrome-512x512.png') }}" alt="logo">
+          </div>
           @error('email')
             <div class="mb-5 rounded-lg border border-red-600 bg-red-100 p-4">{{ $message }}</div>
           @enderror
@@ -41,9 +44,13 @@
               </div>
             </form>
           </div>
+          <div class="mt-5 text-center text-neutral-700">
+            ©️{{ date('Y') }} <a class="font-medium text-primary hover:underline" href="{{ url('/') }}">Happy
+              Holiday</a> - All Rights Reserved
+            </d>
+          </div>
         </div>
       </div>
-    </div>
   </body>
 
 </html>
