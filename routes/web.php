@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PackageController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,6 @@ Route::post('/auth/authenticate', [AuthController::class, 'authenticate']);
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/admin', [DashboardController::class, 'index']);
+    Route::get('/admin/packages', [PackageController::class, 'index']);
     Route::get('/admin/logout', [AuthController::class, 'logout']);
 });
