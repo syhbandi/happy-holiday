@@ -9,7 +9,7 @@
         <h2 class="mb-5 text-xl font-bold">Menu</h2>
         <ul class="flex flex-col gap-3 font-medium text-white">
           <li><a class="hover:text-primary" href="/">Home</a></li>
-          <li><a class="hover:text-primary" href="/package">Paket Tour</a></li>
+          <li><a class="hover:text-primary" href="/packages">Paket Tour</a></li>
           <li><a class="hover:text-primary" href="/about">Tentang Kami</a></li>
           <li><a class="hover:text-primary" href="/contact">Kontak</a></li>
         </ul>

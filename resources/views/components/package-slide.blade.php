@@ -2,7 +2,7 @@
   <div class="container mx-auto max-w-6xl px-6 py-16">
     <div class="mb-5 flex items-center justify-between">
       <h1 class="text-center text-3xl font-bold">Populer Tour</h1>
-      <a href="">
+      <a href="/packages">
         <button
           class="flex h-12 items-center justify-center rounded-lg px-5 font-semibold text-primary hover:bg-neutral-100">Lihat
           Semua

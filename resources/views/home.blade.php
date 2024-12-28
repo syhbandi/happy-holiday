@@ -17,7 +17,7 @@
           memastikan itu Anda akan mendapatkan pengalaman yang tidak akan pernah Anda lupakan.
         </p>
         <a class="mt-5 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 font-semibold text-white hover:bg-opacity-90"
-          href="/package">
+          href="/packages">
           Lihat Tour
           <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon>
         </a>
@@ -77,7 +77,7 @@
             sudut Lombok menyimpan cerita dan keajaiban yang akan membuat liburan Anda
             menjadi kenangan indah sepanjang masa. Jangan ragu, jadikan Lombok destinasi berikutnya untuk petualangan
             Anda!</p>
-          <a href="">
+          <a href="/packages">
             <button
               class="flex h-12 items-center justify-center gap-5 rounded-lg bg-primary px-5 font-semibold text-white hover:bg-opacity-90">
               Lihat Tour

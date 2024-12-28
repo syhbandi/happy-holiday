@@ -7,7 +7,7 @@ use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/package', [HomeController::class, 'package']);
+Route::get('/packages', [HomeController::class, 'packages']);
 Route::get('/about', [HomeController::class, 'about']);
 route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/admin/login', [AuthController::class, 'login']);

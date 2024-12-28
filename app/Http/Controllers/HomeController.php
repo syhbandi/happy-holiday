@@ -12,7 +12,7 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function package(): View
+    public function packages(): View
     {
         $packages = [
             ['id' => 1, 'description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, corporis magnam aspernatur expedita eaque, reprehenderit alias fugiat similique labore reiciendis nam eveniet praesentium a. Minus provident pariatur dolorum a ducimus.', 'name' => 'Tour Lombok 2 hari 1 malam', 'price' => 254000, 'image' => asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif')],

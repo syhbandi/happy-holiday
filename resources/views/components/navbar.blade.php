@@ -9,7 +9,7 @@
       </a>
       <ul class="hidden space-x-10 lg:flex">
         <x-nav-link href="/" greet="hai">Home</x-nav-link>
-        <x-nav-link href="/package">Paket Tour</x-nav-link>
+        <x-nav-link href="/packages">Paket Tour</x-nav-link>
         <x-nav-link href="/about">Tentang Kami</x-nav-link>
         <x-nav-link href="/contact">Kontak</x-nav-link>
       </ul>
@@ -39,7 +39,7 @@
     </div>
     <ul class="flex flex-col space-y-4 px-6 py-4">
       <x-nav-link href="/" greet="hai">Home</x-nav-link>
-      <x-nav-link href="/package">Paket Tour</x-nav-link>
+      <x-nav-link href="/packages">Paket Tour</x-nav-link>
       <x-nav-link href="/about">Tentang Kami</x-nav-link>
       <x-nav-link href="/contact">Kontak</x-nav-link>
     </ul>
