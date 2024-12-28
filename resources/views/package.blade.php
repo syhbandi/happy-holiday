@@ -1,4 +1,4 @@
-<x-layout>
+<x-client-layout>
   <x-slot name="title">Package</x-slot>
   <header class="relative h-96">
     <div class="absolute inset-0 -z-[1] bg-black opacity-50"></div>
@@ -40,4 +40,4 @@
 
     <x-contact />
 
-</x-layout>
+    </x-layout>

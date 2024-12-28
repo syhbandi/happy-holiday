@@ -1,4 +1,4 @@
-<x-layout>
+<x-client-layout>
   <x-slot:title>Kontak</x-slot:title>
   <header class="relative h-96">
     <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('images/Hubbul_Wathan_Islamic_Center.jpg') }}"
@@ -79,4 +79,4 @@
     </div>
   </section>
   <x-contact />
-</x-layout>
+</x-client-layout>

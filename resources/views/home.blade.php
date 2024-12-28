@@ -1,4 +1,4 @@
-<x-layout>
+<x-client-layout>
   <x-slot:title>
     Home
   </x-slot:title>
@@ -91,4 +91,4 @@
 
   <x-contact />
 
-</x-layout>
+</x-client-layout>

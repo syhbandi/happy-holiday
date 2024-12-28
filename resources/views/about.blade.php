@@ -1,4 +1,4 @@
-<x-layout>
+<x-client-layout>
   <x-slot:title>Tentang kami</x-slot:title>
   <header class="relative h-96">
     <img class="absolute inset-0 h-full w-full object-cover"
@@ -28,4 +28,4 @@
     </div>
   </section>
   <x-contact />
-</x-layout>
+</x-client-layout>
