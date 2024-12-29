@@ -17,23 +17,27 @@
       <p class="mb-10 text-gray-600">Temukan paket tour yang sesuai dengan kebutuhanmu.</p>
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($packages as $package)
-          <a href="/package/{{ $package['id'] }}">
+          <a href="/package/{{ $package->slug }}">
             <div class="rounded-2xl bg-white transition duration-300 hover:shadow-lg md:p-4">
-              <img class="h-48 w-full rounded-lg object-cover" src="{{ $package['image'] }}"
-                alt="{{ $package['name'] }}" />
+              <img class="h-48 w-full rounded-lg object-cover"
+                src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
+                alt="{{ $package->name }}" />
               <div class="mt-4" x-data>
-                <h2 class="text-xl font-bold text-gray-800">{{ $package['name'] }}</h2>
-                <p class="mt-4 text-gray-600">{{ Str::limit($package['description'], 100) }}</p>
+                <h2 class="text-xl font-bold text-gray-800">{{ $package->name }}</h2>
+                <p class="mt-4 text-gray-600">{{ Str::limit($package->description, 100) }}</p>
                 <div class="mt-4 flex items-center justify-between">
                   <span class="text-primary">mulai dari*</span>
                   <span class="font-semibold">
-                    {{ Number::currency($package['price'], in: 'IDR', locale: 'ID') }}
+                    {{ Number::currency($package->price, in: 'IDR', locale: 'ID') }}
                 </div>
                 </span>
               </div>
             </div>
           </a>
         @endforeach
+      </div>
+      <div class="mt-3">
+        {{ $packages->links() }}
       </div>
     </div>
     </section>
