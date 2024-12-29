@@ -4,7 +4,7 @@
   @if ($type == 'textarea')
     <textarea
       class="{{ $errors->has($attributes['name']) ? 'border-red-600' : '' }} mt-2 h-32 w-full rounded-lg border border-neutral-300 p-4 outline-none focus:border-primary"
-      {{ $attributes }}></textarea>
+      {{ $attributes }}>{{ $attributes['value'] }}</textarea>
   @elseif ($type == 'file')
     <div x-data="imageUploader">
       <label
