@@ -2,7 +2,7 @@
   class="fixed inset-0 z-10 w-full border-r border-neutral-200 bg-white transition-transform duration-500 ease-in-out sm:w-64 md:min-h-screen"
   :class="{ '-translate-x-full': !open }">
   <div class="flex h-16 items-center justify-between px-5">
-    <a class="text-2xl font-bold text-white" href="/admin">
+    <a class="text-2xl font-bold text-white" href="/">
       <img class="h-16" src="{{ asset('android-chrome-512x512.png') }}" alt="logo">
     </a>
     <button class="md:hidden" x-on:click="toggle">
