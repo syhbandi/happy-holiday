@@ -16,7 +16,7 @@
     @foreach ($packages as $package)
       <x-card>
         <div class="relative flex flex-wrap gap-5">
-          <img class="h-28 w-full rounded-lg object-cover md:w-28"
+          <img class="h-auto w-full rounded-lg object-cover md:h-28 md:w-28"
             src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
             alt="paket tour" />
           <div>
@@ -25,6 +25,12 @@
             <p class="font-semibold">{{ Number::currency($package->price, in: 'IDR', locale: 'id') }}</p>
             <button class="flex items-center text-sm font-medium text-primary">2 paket <ion-icon class="ml-2"
                 name="chevron-down-outline"></ion-icon></button>
+          </div>
+          <div class="absolute right-0 top-0 flex gap-2 p-2 md:p-0">
+            <a class="flex h-8 items-center rounded-lg bg-primary px-3 text-sm text-white"
+              href="/admin/packages/{{ $package->slug }}/edit">Edit</a>
+            <a class="flex h-8 items-center rounded-lg bg-red-600 px-3 text-sm text-white"
+              href="/admin/packages/{{ $package->slug }}/edit">Hapus</a>
           </div>
         </div>
       </x-card>
