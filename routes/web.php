@@ -16,10 +16,13 @@ Route::post('/auth/authenticate', [AuthController::class, 'authenticate']);
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/admin', [DashboardController::class, 'index']);
+
     Route::get('/admin/packages', [PackageController::class, 'index']);
+    Route::post('/admin/packages', [PackageController::class, 'store']);
+    Route::put('/admin/packages/{package}', [PackageController::class, 'update']);
     Route::get('/admin/packages/create', [PackageController::class, 'create']);
     Route::get('/admin/packages/{package:slug}/edit', [PackageController::class, 'edit']);
-    Route::put('/admin/packages/{package}', [PackageController::class, 'update']);
-    Route::post('/admin/packages', [PackageController::class, 'store']);
+    Route::delete('/admin/packages/{package}', [PackageController::class, 'destroy']);
+
     Route::get('/admin/logout', [AuthController::class, 'logout']);
 });

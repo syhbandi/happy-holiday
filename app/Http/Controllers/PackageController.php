@@ -93,4 +93,19 @@ class PackageController extends Controller
 
     return redirect('admin/packages')->with('success', 'Berhasil mengubah paket!');
   }
+
+  public function destroy(Package $package): RedirectResponse
+  {
+    if ($package->image) {
+      Storage::disk('public')->delete($package->image);
+    }
+
+    $delete = $package->delete();
+
+    if (!$delete) {
+      return redirect()->back()->withErrors(['status' => 'Gagal menghapus paket!']);
+    }
+
+    return redirect('admin/packages')->with('success', 'Berhasil menghapus paket!');
+  }
 }
