@@ -8,7 +8,7 @@ class Package extends Model
 {
     protected $fillable = ['name', 'price', 'description', 'image'];
 
-    public function sub_package()
+    public function sub_packages()
     {
         return $this->hasMany(SubPackage::class);
     }
