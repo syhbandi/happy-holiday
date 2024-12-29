@@ -7,7 +7,7 @@
   </div>
 
   @if (session()->has('success'))
-    <div class="rounded-lg border border-green-600 bg-green-100 p-5 text-green-600">
+    <div class="mb-3 rounded-lg border border-green-600 bg-green-100 p-5 text-green-600">
       {{ session('success') }}
     </div>
   @endif
