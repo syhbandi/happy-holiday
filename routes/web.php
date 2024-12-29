@@ -17,5 +17,6 @@ Route::post('/auth/authenticate', [AuthController::class, 'authenticate']);
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/admin', [DashboardController::class, 'index']);
     Route::get('/admin/packages', [PackageController::class, 'index']);
+    Route::get('/admin/packages/create', [PackageController::class, 'create']);
     Route::get('/admin/logout', [AuthController::class, 'logout']);
 });
