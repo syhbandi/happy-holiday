@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('package_id')->constrained()->onDelete('cascade');
             $table->string('name', 255);
-            $table->string('slug', 255);
-            $table->string('description', 255);
-            $table->string('price', 255);
-            $table->text('image');
+            $table->string('slug', 255)->unique();
+            $table->text('description');
+            $table->decimal('price', 10, 2);
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

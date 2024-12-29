@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->string('slug', 255);
-            $table->string('description', 255);
-            $table->string('price', 255);
-            $table->text('image')->nullable();
+            $table->string('slug', 255)->unique();
+            $table->text('description');
+            $table->decimal('price', 10, 2);
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
