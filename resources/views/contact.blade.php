@@ -36,43 +36,50 @@
             <h1 class="mb-4 text-2xl font-bold">Kantor</h1>
             <div class="mb-3 flex flex-wrap gap-3">
               <ion-icon class="text-2xl text-primary" name="location-outline"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">Jl. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p class="flex-1 text-lg text-gray-600">Jl. Baiturrahman gang Harum No. 2 Mataram, Nusa Tenggara Barat,
+                Indonesia</p>
             </div>
 
           </div>
           <div class="mb-5">
             <h1 class="mb-4 text-2xl font-bold">Kontak</h1>
             <div class="mb-3 flex flex-wrap gap-3">
-              <ion-icon class="text-2xl text-primary" name="call-outline"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">0812-3456-7890</p>
+              <ion-icon class="text-2xl text-green-600" name="logo-whatsapp"></ion-icon>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="https://wa.me/62895384297876"
+                target="_blank">0895-3842-97876</a>
             </div>
             <div class="mb-3 flex flex-wrap gap-3">
               <ion-icon class="text-2xl text-green-600" name="logo-whatsapp"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">0812-3456-7890</p>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="https://wa.me/6287743040833"
+                target="_blank">0877-4304-0833</a>
             </div>
             <div class="mb-3 flex flex-wrap gap-3">
               <ion-icon class="text-2xl text-primary" name="mail-outline"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">happyholiday@gmail.com</p>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="mailto:abahalkaff56@gmail.com"
+                target="_blank">abahalkaff56@gmail.com</a>
             </div>
           </div>
           <div class="mb-5">
             <h1 class="mb-4 text-2xl font-bold">Sosial Media</h1>
             <div class="mb-3 flex flex-wrap gap-3">
               <ion-icon class="text-2xl text-blue-600" name="logo-facebook"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">@happy.holiday</p>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="https://www.facebook.com/happyholiday"
+                target="_blank">@happyholiday</a>
             </div>
             <div class="mb-3 flex flex-wrap gap-3">
               <ion-icon class="text-2xl text-red-600" name="logo-instagram"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">@happy.holiday</p>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="https://www.instagram.com/happyholyyday"
+                target="_blank">@happyholyyday</a>
             </div>
             <div class="mb-3 flex flex-wrap gap-3">
-              <ion-icon class="text-2xl text-blue-600" name="logo-twitter"></ion-icon>
-              <p class="flex-1 text-lg text-gray-600">@happy.holiday</p>
+              <ion-icon class="text-2xl text-gray-900" name="logo-tiktok"></ion-icon>
+              <a class="shrink text-lg text-gray-600 hover:underline" href="https://tiktok.com/@happyholliday__"
+                target="_blank">@happyholliday__</a>
             </div>
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1972.6919592259708!2d116.19802833167444!3d-8.559031497949663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc720384a52fd%3A0xe62f951ba6943d96!2sPenjahit%20Yuyun!5e0!3m2!1sid!2sid!4v1735303596992!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.9417906513954!2d116.08847697028021!3d-8.601587568418214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf761841a4a3%3A0xf3be7a2955ebdec7!2sJl.%20Baiturrahman%2C%20Kota%20Mataram%2C%20Nusa%20Tenggara%20Bar.%2083116!5e0!3m2!1sid!2sid!4v1735380546002!5m2!1sid!2sid"
           style="border:0;" width="600" height="450" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
