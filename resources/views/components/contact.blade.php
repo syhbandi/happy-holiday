@@ -8,14 +8,19 @@
         <p class="mb-5 mt-4 text-gray-600">Ingin bertanya paket tour yang kamu butuhkan? <br />hubungi kami kapanpun di
           manapun</p>
         <a class="relative mb-3 flex h-10 w-full items-center justify-center gap-3 rounded-lg font-semibold text-primary ring ring-primary hover:bg-primary hover:text-white md:max-w-[300px]"
-          href="mailto:happyholiday@gmail.com">
+          href="mailto:abahalkaff56@gmail.com" target="_blank">
           <ion-icon class="absolute inset-0 left-3 my-auto text-xl" name="mail-outline"></ion-icon>
-          happyholiday@gmail.com
+          abahalkaff56@gmail.com
+        </a>
+        <a class="relative mb-3 flex h-10 w-full items-center justify-center gap-3 rounded-lg bg-green-600 font-semibold text-white ring ring-green-600 hover:bg-green-700 hover:ring-green-700 md:max-w-[300px]"
+          href="https://wa.me/62895384297876" target="_blank">
+          <ion-icon class="absolute inset-0 left-3 my-auto text-xl" name="logo-whatsapp"></ion-icon>
+          Chat via WhatsApp 1
         </a>
         <a class="relative flex h-10 w-full items-center justify-center gap-3 rounded-lg bg-green-600 font-semibold text-white ring ring-green-600 hover:bg-green-700 hover:ring-green-700 md:max-w-[300px]"
-          href="https://wa.me/6281234567890">
+          href="https://wa.me/6287743040833" target="_blank">
           <ion-icon class="absolute inset-0 left-3 my-auto text-xl" name="logo-whatsapp"></ion-icon>
-          Chat via WhatsApp
+          Chat via WhatsApp 2
         </a>
       </div>
     </div>
