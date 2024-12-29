@@ -2,12 +2,13 @@
 <div class="mt-2">
   <label class="text-sm font-medium md:text-base" for="{{ $attributes['id'] }}">{{ $label }}</label>
   @if ($type == 'textarea')
-    <textarea class="mt-2 h-32 w-full rounded-lg border border-neutral-300 p-4 outline-none focus:border-primary"
+    <textarea
+      class="{{ $errors->has($attributes['name']) ? 'border-red-600' : '' }} mt-2 h-32 w-full rounded-lg border border-neutral-300 p-4 outline-none focus:border-primary"
       {{ $attributes }}></textarea>
   @elseif ($type == 'file')
     <div x-data="imageUploader">
       <label
-        class="mt-2 flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-lg border border-neutral-300 px-4 text-primary hover:bg-neutral-100"
+        class="{{ $errors->has($attributes['name']) ? 'border-red-600' : '' }} mt-2 flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-lg border border-neutral-300 px-4 text-primary hover:bg-neutral-100"
         for="{{ $attributes['id'] }}">
         <ion-icon name="cloud-upload-outline"></ion-icon>
         Pilih File
@@ -47,7 +48,8 @@
       });
     </script>
   @else
-    <input class="mt-2 h-11 w-full rounded-lg border border-neutral-300 px-4 outline-none focus:border-primary"
+    <input
+      class="{{ $errors->has($attributes['name']) ? 'border-red-600' : '' }} mt-2 h-11 w-full rounded-lg border border-neutral-300 px-4 outline-none focus:border-primary"
       type="{{ $type }}" {{ $attributes }} />
   @endif
   <x-input-error name="{{ $attributes['name'] }}" />
