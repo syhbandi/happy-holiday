@@ -1,4 +1,4 @@
-<div class="mb-5 flex flex-col items-center justify-between md:flex-row">
+<div class="mb-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
   <h1 class="flex-1 text-3xl font-bold">{{ $slot }}</h1>
   @php
     $segments = Request::segments();
