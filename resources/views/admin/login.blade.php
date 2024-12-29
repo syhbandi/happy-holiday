@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot:title>Admin Login</x-slot>
-  <section class="bg-neutral-200">
+  <section class="bg-neutral-100">
     <div class="container mx-auto max-w-6xl px-5">
       <div class="flex h-screen items-center justify-center">
         <div class="w-full max-w-sm">
@@ -35,7 +35,8 @@
             </form>
           </div>
           <div class="mt-5 text-center text-neutral-700">
-            ©️{{ date('Y') }} <a class="font-medium text-primary hover:underline" href="{{ url('/') }}">Happy
+            &copy;{{ date('Y') }} <a class="font-medium text-primary hover:underline"
+              href="{{ url('/') }}">Happy
               Holiday</a> - All Rights Reserved
             </d>
           </div>
