@@ -27,7 +27,7 @@ class PackageController extends Controller
       'name' => 'required|string|max:255',
       'description' => 'required|string',
       'price' => 'required|numeric|min:0',
-      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Maks 2MB
+      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10048', // Maks 2MB
     ]);
 
     // Buat slug dari nama paket
