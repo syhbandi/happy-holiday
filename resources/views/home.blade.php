@@ -63,11 +63,8 @@
   <section class="relative py-12">
     <div class="container mx-auto max-w-6xl px-6">
       <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <div class="">
-          <img class="h-96 w-full rounded-lg object-cover shadow-lg"
-            src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}" alt="get in love with lombok">
-        </div>
-        <div class="flex flex-col justify-center md:pl-10">
+
+        <div class="flex flex-col justify-center">
           <h1 class="mb-5 text-3xl font-bold md:text-4xl">
             Get in Love with Lombok
           </h1>
@@ -84,6 +81,10 @@
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </button>
           </a>
+        </div>
+        <div class="">
+          <img class="h-96 w-full rounded-lg object-cover shadow-lg"
+            src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}" alt="get in love with lombok">
         </div>
       </div>
     </div>
