@@ -11,41 +11,41 @@
     </div>
     <div class="grid grid-cols-1 gap-10 md:grid-cols-4">
       <a href="">
-        <div class="relative">
-          <img class="h-64 w-full rounded-lg object-cover"
-            src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}" alt="">
-        </div>
-        <h2 class="mt-4 text-xl font-bold">Tour Lombok</h2>
-        <p class="text-sm text-primary">Harga mulai</p>
-        <p class="text-gray-600">Rp. 254.000,00</p>
-      </a>
-      <a href="">
-        <div class="relative">
-          <img class="h-64 w-full rounded-lg object-cover" src="{{ asset('images/trip-A1aj8KqqZRI1gbOJ.avif') }}"
+        <div class="relative overflow-hidden rounded-lg">
+          <img class="h-64 w-full object-cover" src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}"
             alt="">
+          <div class="absolute bottom-0 flex h-2/3 w-full items-end bg-gradient-to-t from-neutral-900 p-3">
+            <h2 class="mt-4 text-xl font-bold text-white">Tour Lombok</h2>
+          </div>
         </div>
-        <h2 class="mt-4 text-xl font-bold">Adventure</h2>
-        <p class="text-sm text-primary">Harga mulai</p>
-        <p class="text-gray-600">Rp. 1.000.000,00</p>
+
       </a>
       <a href="">
-        <div class="relative">
-          <img class="h-64 w-full rounded-lg object-cover"
+        <div class="relative overflow-hidden rounded-lg">
+          <img class="h-64 w-full object-cover" src="{{ asset('images/trip-A1aj8KqqZRI1gbOJ.avif') }}" alt="">
+          <div class="absolute bottom-0 flex h-2/3 w-full items-end bg-gradient-to-t from-neutral-900 p-3">
+            <h2 class="mt-4 text-xl font-bold text-white">Relaxation</h2>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div class="relative overflow-hidden rounded-lg">
+          <img class="h-64 w-full object-cover"
             src="{{ asset('images/d4d73ip-3e04e1e8-4d81-4d03-ad64-88511ad47860-mjE5LO27NRTV4bg2.avif') }}"
             alt="">
+          <div class="absolute bottom-0 flex h-2/3 w-full items-end bg-gradient-to-t from-neutral-900 p-3">
+            <h2 class="mt-4 text-xl font-bold text-white">Culture</h2>
+          </div>
         </div>
-        <h2 class="mt-4 text-xl font-bold">Culture</h2>
-        <p class="text-sm text-primary">Harga mulai</p>
-        <p class="text-gray-600">Rp. 1.000.000,00</p>
       </a>
       <a href="">
-        <div class="relative">
-          <img class="h-64 w-full rounded-lg object-cover"
-            src="{{ asset('images/pantai-kuta-lombok-nusa-tenggara-barat.jpg') }}" alt="">
+        <div class="relative overflow-hidden rounded-lg">
+          <img class="h-64 w-full object-cover" src="{{ asset('images/pantai-kuta-lombok-nusa-tenggara-barat.jpg') }}"
+            alt="">
+          <div class="absolute bottom-0 flex h-2/3 w-full items-end bg-gradient-to-t from-neutral-900 p-3">
+            <h2 class="mt-4 text-xl font-bold text-white">Adventure</h2>
+          </div>
         </div>
-        <h2 class="mt-4 text-xl font-bold">Relaxation</h2>
-        <p class="text-sm text-primary">Harga mulai</p>
-        <p class="text-gray-600">Rp. 1.000.000,00</p>
       </a>
     </div>
   </div>
