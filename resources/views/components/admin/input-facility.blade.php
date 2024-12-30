@@ -1,5 +1,5 @@
-@props(['label', 'value'])
-<div x-data="{ {{ $attributes['name'] }}: {{ $value == '' ? '[]' : $value }} }">
+@props(['label', 'value' => []])
+<div x-data="{ {{ $attributes['name'] }}: {{ json_encode($value) }} }">
   <div class="text-sm font-medium md:text-base" for="{{ $attributes['id'] }}">{{ $label }}</div>
   <template x-for="(fac, index) in {{ $attributes['name'] }}" :key="index">
     <div class="mb-2 flex items-center gap-2">
