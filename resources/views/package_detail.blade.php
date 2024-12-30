@@ -13,17 +13,41 @@
 
   <main>
     <div class="container mx-auto max-w-4xl px-6 py-12">
-      <h1 class="mb-10 text-center text-4xl font-bold text-gray-800">{{ $package->name }}</h1>
+      <h1 class="mb-3 text-center text-4xl font-bold text-gray-800">{{ $package->name }}</h1>
+      <h2 class="mb-10 text-center text-xl font-medium text-gray-600">
+        Harga mulai dari <span
+          class="font-bold text-gray-800">{{ Number::currency($package->price, in: 'IDR', locale: 'ID') }}</span>
+      </h2>
       <img class="mb-10 h-56 w-full rounded-lg object-cover md:h-96"
         src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
         alt="{{ $package->name }}" />
-      <p class="mt-4 text-gray-600">{{ $package->description }}</p>
-      <span class="font-semibold">
-        {{ Number::currency($package->price, in: 'IDR', locale: 'ID') }}
-      </span>
-      <div class="mt-6">
-        <a class="inline-block rounded-lg bg-primary px-6 py-3 text-white" href="/contact">Pesan Sekarang</a>
-      </div>
+      <p class="my-5 text-gray-600">{{ $package->description }}</p>
+
+      @if ($package->includes)
+        <div class="mb-5">
+          <h3 class="mb-2 text-base font-semibold">Includes</h3>
+          <ul>
+            @foreach ($package->includes as $include)
+              <li class="flex items-center gap-3"><ion-icon class="text-xl text-green-600"
+                  name="checkmark-outline"></ion-icon>{{ $include }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+
+      @if ($package->excludes)
+        <div class="mb-5">
+          <h3 class="mb-2 text-base font-semibold">Excludes</h3>
+          <ul>
+            @foreach ($package->excludes as $exclude)
+              <li class="flex items-center gap-3"><ion-icon class="text-xl text-red-600"
+                  name="close-outline"></ion-icon>{{ $exclude }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+
+      {{ json_encode($package) }}
     </div>
   </main>
 

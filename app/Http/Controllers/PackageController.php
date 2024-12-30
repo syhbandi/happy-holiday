@@ -29,6 +29,8 @@ class PackageController extends Controller
       'description' => 'required|string',
       'price' => 'required|numeric|min:0',
       'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10048', // Maks 2MB
+      'includes' => 'nullable|array',
+      'excludes' => 'nullable|array',
     ]);
 
     // Buat slug dari nama paket
@@ -44,6 +46,8 @@ class PackageController extends Controller
     $package->description = $request->description;
     $package->price = $request->price;
     $package->image = $imagePath; // Simpan path gambar
+    $package->includes = $request->includes;
+    $package->excludes = $request->excludes;
     $package->save();
 
     if (!$package) {
