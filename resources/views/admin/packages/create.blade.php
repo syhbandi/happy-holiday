@@ -25,12 +25,12 @@
 
         {{-- input includes --}}
         <x-card>
-          <x-admin.input-facility id="includes" name="includes" value="{{ old('includes') }}" label="Includes" />
+          <x-admin.input-facility id="includes" name="includes" :value="old('includes')" label="Includes" />
         </x-card>
 
         {{-- input excludes --}}
         <x-card>
-          <x-admin.input-facility id="excludes" name="excludes" value="{{ old('excludes') }}" label="Excludes" />
+          <x-admin.input-facility id="excludes" name="excludes" :value="old('excludes')" label="Excludes" />
         </x-card>
       </div>
 
