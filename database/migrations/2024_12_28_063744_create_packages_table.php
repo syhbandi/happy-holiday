@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('description');
             $table->decimal('price', 10, 2);
             $table->string('image')->nullable();
+            $table->json('includes')->nullable();
+            $table->json('excludes')->nullable();
             $table->timestamps();
         });
     }
