@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrator',
             'username' => 'admin',
             'email' => 'happyholiday352@gmail.com',
+            'password' => Hash::make('Liburan2025')
         ]);
     }
 }
