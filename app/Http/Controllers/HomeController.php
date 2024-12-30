@@ -19,6 +19,11 @@ class HomeController extends Controller
         return view('package', compact('packages'));
     }
 
+    public function package(Package $package): View
+    {
+        return view('package_detail', compact('package'));
+    }
+
     public function about(): View
     {
         return view('about');

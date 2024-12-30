@@ -17,7 +17,7 @@
       <p class="mb-10 text-gray-600">Temukan paket tour yang sesuai dengan kebutuhanmu.</p>
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($packages as $package)
-          <a href="/package/{{ $package->slug }}">
+          <a href="/packages/{{ $package->slug }}">
             <div class="rounded-2xl bg-white transition duration-300 hover:shadow-lg md:p-4">
               <img class="h-48 w-full rounded-lg object-cover"
                 src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
@@ -29,8 +29,8 @@
                   <span class="text-primary">mulai dari*</span>
                   <span class="font-semibold">
                     {{ Number::currency($package->price, in: 'IDR', locale: 'ID') }}
+                  </span>
                 </div>
-                </span>
               </div>
             </div>
           </a>
@@ -40,8 +40,8 @@
         {{ $packages->links() }}
       </div>
     </div>
-    </section>
+  </main>
 
-    <x-contact />
+  <x-contact />
 
-    </x-layout>
+  </x-layout>
