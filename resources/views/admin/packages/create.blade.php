@@ -25,40 +25,12 @@
 
         {{-- input includes --}}
         <x-card>
-          <div x-data="{ includes: [] }">
-            <label class="mb-2 block font-medium" for="includes">Includes</label>
-            <template x-for="(include, index) in includes" :key="index">
-              <div class="mb-2 flex items-center gap-2">
-                <input class="h-11 rounded-lg border border-neutral-300 px-4 outline-none focus:border-primary"
-                  type="text" :name="`includes[${index}]`" x-model="includes[index]" placeholder="e.g. Transport">
-                <button
-                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-red-600 text-red-600 outline-none"
-                  type="button" @click="includes.splice(index, 1)">
-                  <ion-icon name="trash-outline"></ion-icon>
-                </button>
-              </div>
-            </template>
-            <button class="font-sm h-8 text-primary" type="button" @click="includes.push('')">Tambah Include</button>
-          </div>
+          <x-admin.input-facility id="includes" name="includes" value="{{ old('includes') }}" label="Includes" />
         </x-card>
 
         {{-- input excludes --}}
         <x-card>
-          <div x-data="{ excludes: [] }">
-            <label class="mb-2 block font-medium" for="excludes">Excludes</label>
-            <template x-for="(exclude, index) in excludes" :key="index">
-              <div class="mb-2 flex items-center gap-2">
-                <input class="h-11 rounded-lg border border-neutral-300 px-4 outline-none focus:border-primary"
-                  type="text" :name="`excludes[${index}]`" x-model="excludes[index]" placeholder="e.g. Transport">
-                <button
-                  class="flex h-11 w-11 items-center justify-center rounded-lg border border-red-600 text-red-600 outline-none"
-                  type="button" @click="excludes.splice(index, 1)">
-                  <ion-icon name="trash-outline"></ion-icon>
-                </button>
-              </div>
-            </template>
-            <button class="font-sm h-8 text-primary" type="button" @click="excludes.push('')">Tambah Exclude</button>
-          </div>
+          <x-admin.input-facility id="excludes" name="excludes" value="{{ old('excludes') }}" label="Excludes" />
         </x-card>
       </div>
 
