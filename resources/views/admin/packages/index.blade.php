@@ -7,8 +7,12 @@
   </div>
 
   @if (session()->has('success'))
-    <div class="mb-3 rounded-lg border border-green-600 bg-green-100 p-5 text-green-600">
+    <div class="mb-3 flex items-start justify-between rounded-lg border border-green-600 bg-green-100 p-5 text-green-600"
+      x-data="{ show: true }" :class="{ 'hidden': !show }">
       {{ session('success') }}
+      <button x-on:click="show=false">
+        <ion-icon class="text-xl" name="close-outline" />
+      </button>
     </div>
   @endif
 
