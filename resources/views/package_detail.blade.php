@@ -47,7 +47,7 @@
         </div>
       @endif
 
-      @if ($package->sub_packages)
+      @if (count($package->sub_packages))
         <div x-data="{ subs: {{ json_encode($package->sub_packages) }}, active: 0 }">
           <h3 class="mb-5 text-2xl font-semibold">Pilihan Paket</h3>
 
