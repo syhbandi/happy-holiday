@@ -12,6 +12,14 @@
   </header>
 
   <main>
+    {{-- breadcrumbs --}}
+    <div class="container mx-auto max-w-6xl px-6 pt-12">
+      <div class="inline-flex items-center gap-3">
+        <a class="font-medium text-primary hover:underline" href="/packages">Paket Tour</a>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+        {{ $package->name }}
+      </div>
+    </div>
     <div class="container mx-auto max-w-4xl px-6 py-12">
       <h1 class="mb-3 text-center text-4xl font-bold text-gray-800">{{ $package->name }}</h1>
       <h2 class="mb-10 text-center text-xl font-medium text-gray-600">
