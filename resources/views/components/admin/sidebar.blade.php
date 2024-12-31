@@ -12,6 +12,7 @@
   <ul class="mt-10 space-y-3 px-5">
     <x-admin.navbar-link href="/admin" icon="stats-chart-outline">Dashboard</x-admin.navbar-link>
     <x-admin.navbar-link href="/admin/packages" icon="albums-outline">Paket Tour</x-admin.navbar-link>
+    <x-admin.navbar-link href="/admin/sub-packages" icon="albums-outline">Sub Paket Tour</x-admin.navbar-link>
     <x-admin.navbar-link href="/admin/logout" icon="log-out-outline">Logout</x-admin.navbar-link>
   </ul>
 </aside>
