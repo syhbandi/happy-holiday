@@ -21,6 +21,7 @@ class HomeController extends Controller
 
     public function package(Package $package): View
     {
+        $package->load('sub_packages');
         return view('package_detail', compact('package'));
     }
 

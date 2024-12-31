@@ -21,11 +21,11 @@
       <img class="mb-10 h-56 w-full rounded-lg object-cover md:h-96"
         src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
         alt="{{ $package->name }}" />
-      <p class="my-5 text-gray-600">{{ $package->description }}</p>
+      <p class="mb-10 mt-5 text-gray-600">{{ $package->description }}</p>
 
       @if ($package->includes)
-        <div class="mb-5">
-          <h3 class="mb-2 text-base font-semibold">Includes</h3>
+        <div class="mb-10">
+          <h3 class="mb-2 text-2xl font-semibold">Includes</h3>
           <ul>
             @foreach ($package->includes as $include)
               <li class="flex items-center gap-3"><ion-icon class="text-xl text-green-600"
@@ -36,8 +36,8 @@
       @endif
 
       @if ($package->excludes)
-        <div class="mb-5">
-          <h3 class="mb-2 text-base font-semibold">Excludes</h3>
+        <div class="mb-10">
+          <h3 class="mb-2 text-2xl font-semibold">Excludes</h3>
           <ul>
             @foreach ($package->excludes as $exclude)
               <li class="flex items-center gap-3"><ion-icon class="text-xl text-red-600"
@@ -47,10 +47,24 @@
         </div>
       @endif
 
-      {{ json_encode($package) }}
+      @if ($package->sub_packages)
+        <div x-data="{ subs: {{ json_encode($package->sub_packages) }}, active: 0 }">
+          <h3 class="mb-5 text-2xl font-semibold">Pilihan Paket</h3>
+
+          <div class="mb-3 flex items-center gap-3">
+            <template x-for="(sub, index) in subs">
+              <button class="flex h-9 items-center justify-center rounded-lg px-5 font-medium" x-text="sub.name"
+                :class="{ 'bg-primary text-white': active === index, 'bg-neutral-200': active !== index }"
+                :key="index" x-on:click="active = index">
+              </button>
+            </template>
+          </div>
+
+          <div class="prose" x-html="subs[active].description"></div>
+        </div>
+      @endif
+
     </div>
   </main>
-
   <x-contact />
-
   </x-layout>
