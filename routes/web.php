@@ -31,6 +31,7 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::get('/admin/sub-packages/{subPackage}/edit', [SubPackagesController::class, 'edit']);
     Route::post('/admin/sub-packages', [SubPackagesController::class, 'store']);
     Route::put('/admin/sub-packages/{subPackage}', [SubPackagesController::class, 'update']);
+    Route::delete('/admin/sub-packages/{subPackage}', [SubPackagesController::class, 'delete']);
 
 
     Route::get('/admin/logout', [AuthController::class, 'logout']);

@@ -65,4 +65,15 @@ class SubPackagesController extends Controller
 
         return redirect('admin/sub-packages')->with('success', 'Berhasil mengubah sub paket!');
     }
+
+    public function delete(SubPackage $subPackage): RedirectResponse
+    {
+        $delete = $subPackage->delete();
+
+        if (!$delete) {
+            return redirect()->back()->withErrors(['status' => 'Gagal menghapus sub paket!']);
+        }
+
+        return redirect('admin/sub-packages')->with('success', 'Berhasil menghapus sub paket!');
+    }
 }
