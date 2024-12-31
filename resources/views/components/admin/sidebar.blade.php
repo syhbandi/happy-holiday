@@ -3,7 +3,7 @@
   :class="{ '-translate-x-full': !open }">
   <div class="flex h-16 items-center justify-between px-5">
     <a class="text-2xl font-bold text-white" href="/">
-      <img class="h-16" src="{{ asset('android-chrome-512x512.png') }}" alt="logo">
+      <img class="h-16" src="{{ asset('android-chrome-512x512.png') }}" alt="logo happy holiday" loading="lazy">
     </a>
     <button class="md:hidden" x-on:click="toggle">
       <ion-icon class="text-xl" name="close-outline"></ion-icon>

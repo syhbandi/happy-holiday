@@ -2,7 +2,8 @@
   <x-slot:title>Tentang kami</x-slot:title>
   <header class="relative h-96">
     <img class="absolute inset-0 h-full w-full object-cover"
-      src="{{ asset('images/d4d73ip-3e04e1e8-4d81-4d03-ad64-88511ad47860-mjE5LO27NRTV4bg2.avif') }}" alt="tentang kami" />
+      src="{{ asset('images/d4d73ip-3e04e1e8-4d81-4d03-ad64-88511ad47860-mjE5LO27NRTV4bg2.avif') }}" alt="tentang kami"
+      loading="lazy" />
     <div class="absolute inset-0 bg-black bg-opacity-70"></div>
     <div class="absolute inset-0">
       <div class="container mx-auto flex h-full max-w-6xl items-center justify-center px-6">
@@ -23,7 +24,7 @@
         </div>
         <img class="h-96 w-full rounded-2xl object-cover"
           src="{{ asset('images/d4d73ip-3e04e1e8-4d81-4d03-ad64-88511ad47860-mjE5LO27NRTV4bg2.avif') }}"
-          alt="semangat pemuda" />
+          alt="semangat pemuda" loading="lazy" />
       </div>
     </div>
   </section>

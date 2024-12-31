@@ -84,7 +84,8 @@
         </div>
         <div class="">
           <img class="h-96 w-full rounded-lg object-cover shadow-lg"
-            src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}" alt="get in love with lombok">
+            src="{{ asset('images/lombok-thumbnail-YZ9XnLbRLxUVbNrZ.avif') }}" alt="get in love with lombok"
+            loading="lazy">
         </div>
       </div>
     </div>

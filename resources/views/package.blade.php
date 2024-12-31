@@ -4,7 +4,7 @@
     <div class="absolute inset-0 -z-[1] bg-black opacity-50"></div>
     <div class="absolute inset-0 -z-[2]">
       <img class="h-full w-full object-cover" src="{{ asset('images/pantai-kuta-lombok-nusa-tenggara-barat.jpg') }}"
-        alt="Package" />
+        alt="Package" loading='lazy' />
     </div>
     <div class="container mx-auto flex h-full max-w-6xl items-center justify-center px-6">
       <h1 class="text-center text-3xl font-bold text-white md:text-5xl">Saatnya Berpetualang</h1>
@@ -21,7 +21,7 @@
             <div class="rounded-2xl bg-white transition duration-300 hover:shadow-lg md:p-4">
               <img class="h-48 w-full rounded-lg object-cover"
                 src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
-                alt="{{ $package->name }}" />
+                alt="{{ $package->name }}" loading="lazy" />
               <div class="mt-4" x-data>
                 <h2 class="text-xl font-bold text-gray-800">{{ $package->name }}</h2>
                 <p class="mt-4 text-gray-600">{{ Str::limit($package->description, 100) }}</p>

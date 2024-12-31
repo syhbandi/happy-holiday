@@ -2,7 +2,7 @@
   <x-slot:title>Kontak</x-slot:title>
   <header class="relative h-96">
     <img class="absolute inset-0 h-full w-full object-cover" src="{{ asset('images/Hubbul_Wathan_Islamic_Center.jpg') }}"
-      alt="tentang kami" />
+      alt="tentang kami" loading="lazy" />
     <div class="absolute inset-0 bg-black bg-opacity-70"></div>
     <div class="absolute inset-0">
       <div class="container mx-auto flex h-full max-w-6xl items-center justify-center px-6">
@@ -15,7 +15,8 @@
     <div class="container mx-auto max-w-6xl px-6">
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
         <img class="order-last h-96 w-full rounded-2xl object-cover md:order-first"
-          src="{{ asset('images/f625881d-b405-4d28-987e-569d9a28f8f2_Large.jpeg') }}" alt="semangat pemuda" />
+          src="{{ asset('images/f625881d-b405-4d28-987e-569d9a28f8f2_Large.jpeg') }}" alt="semangat pemuda"
+          loading="lazy" />
         <div class="flex flex-col justify-center">
           <h1 class="text-3xl font-bold">Let's Visit</h1>
           <p class="mt-4 text-lg text-gray-600">

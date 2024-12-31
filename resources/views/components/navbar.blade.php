@@ -5,7 +5,7 @@
   <div class="container mx-auto max-w-6xl px-6">
     <div class="flex w-full items-center justify-between">
       <a href="/">
-        <img class="w-14 lg:w-20" src="/android-chrome-512x512.png" alt="Happy Holiday">
+        <img class="w-14 lg:w-20" src="/android-chrome-512x512.png" alt="Happy Holiday" loading="lazy">
       </a>
       <ul class="hidden space-x-10 lg:flex">
         <x-nav-link href="/" greet="hai">Home</x-nav-link>
@@ -28,7 +28,7 @@
     :class="{ 'translate-x-0 text-neutral-800': open, 'translate-x-full': !open }">
     <div class="flex items-center justify-between px-6">
       <a href="/">
-        <img class="w-14" src="/android-chrome-512x512.png" alt="Happy Holiday">
+        <img class="w-14" src="/android-chrome-512x512.png" alt="Happy Holiday" loading="lazy">
       </a>
       <button x-on:click="open = !open">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
