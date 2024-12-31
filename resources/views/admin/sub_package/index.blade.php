@@ -22,18 +22,18 @@
 
   @if ($subPackages->isNotEmpty())
     <div class="space-y-5">
-      @foreach ($subPackages as $package)
+      @foreach ($subPackages as $sub)
         <x-card>
           <div class="relative flex flex-wrap gap-5">
             <div>
-              <h2 class="mb-2 text-xl font-semibold">{{ $package->name }}</h2>
-              <p class="mb-2 text-neutral-800">{{ $package->package->name }}</p>
-              <p class="mb-2 text-neutral-500">{{ Str::limit($package->description, 100) }}</p>
+              <h2 class="mb-2 text-xl font-semibold">{{ $sub->name }}</h2>
+              <p class="mb-2 text-neutral-800">{{ $sub->package->name }}</p>
+              <p class="mb-2 text-neutral-500">{{ Str::limit($sub->description, 100) }}</p>
             </div>
             <div class="absolute right-0 top-0 flex gap-2 p-2 md:p-0">
               <a class="flex h-8 items-center rounded-lg bg-primary px-3 text-sm text-white"
-                href="/admin/sub-packages/{{ $package->slug }}/edit">Edit</a>
-              <form action="/admin/sub-packages/{{ $package->id }}" method="POST" x-data="{ submit: false }"
+                href="/admin/sub-packages/{{ $sub->id }}/edit">Edit</a>
+              <form action="/admin/sub-packages/{{ $sub->id }}" method="POST" x-data="{ submit: false }"
                 @submit.prevent="if(confirm('Apakah anda yakin?')){submit=true; $el.submit()}">
                 @csrf
                 @method('DELETE')

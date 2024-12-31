@@ -32,12 +32,13 @@
         <div class="mt-2">
           <label class="mb-2 block font-medium" for="description">Deskripsi</label>
           <input id="description" name="description" type="hidden" />
-          <trix-editor class="prose" input="description"></trix-editor>
+          <trix-editor class="prose min-h-96 w-full rounded-lg border border-neutral-200 focus:border-primary"
+            input="description"></trix-editor>
           <x-input-error name="description" />
         </div>
         <div class="mt-2 flex items-center justify-end gap-3">
           <a class="flex h-11 items-center justify-center gap-2 rounded-lg border border-neutral-200 px-4 text-primary hover:bg-neutral-100"
-            href="/admin/packages" role="button">
+            href="/admin/sub-packages" role="button">
             <ion-icon class="text-lg" name="arrow-back-outline"></ion-icon>
             Batal
           </a>

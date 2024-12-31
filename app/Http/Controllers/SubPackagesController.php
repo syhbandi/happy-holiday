@@ -46,4 +46,23 @@ class SubPackagesController extends Controller
 
         return redirect('admin/sub-packages')->with('success', 'Berhasil menambah sub paket!');
     }
+
+    public function update(Request $request, SubPackage $subPackage)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable',
+            'package' => 'required'
+        ]);
+
+        $subPackage->update($request->except('package'));
+        $package = Package::find($request->package);
+        $save = $package->sub_packages()->save($subPackage);
+
+        if (!$save) {
+            return redirect()->back()->withErrors(['status' => 'Gagal Mengubah sub paket!'])->withInput($request->all());
+        }
+
+        return redirect('admin/sub-packages')->with('success', 'Berhasil mengubah sub paket!');
+    }
 }
