@@ -1,6 +1,6 @@
 <section class="relative">
   <div class="container mx-auto max-w-6xl px-6 py-16">
-    <div class="mb-5 flex items-center justify-between">
+    <div class="mb-5 flex flex-col items-center justify-between gap-2 md:flex-row">
       <h1 class="text-center text-3xl font-bold">Populer Tour</h1>
       <a href="/packages">
         <button

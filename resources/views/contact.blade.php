@@ -79,9 +79,9 @@
             </div>
           </div>
         </div>
-        <iframe
+        <iframe class="w-full"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.9417906513954!2d116.08847697028021!3d-8.601587568418214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf761841a4a3%3A0xf3be7a2955ebdec7!2sJl.%20Baiturrahman%2C%20Kota%20Mataram%2C%20Nusa%20Tenggara%20Bar.%2083116!5e0!3m2!1sid!2sid!4v1735380546002!5m2!1sid!2sid"
-          style="border:0;" width="600" height="450" allowfullscreen="" loading="lazy"
+          style="border:0;" height="450" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
