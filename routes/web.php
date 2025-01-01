@@ -7,6 +7,7 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SubPackagesController;
 use App\Http\Middleware\Authenticate;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -17,6 +18,9 @@ route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/admin/login', [AuthController::class, 'login']);
 Route::post('/auth/authenticate', [AuthController::class, 'authenticate']);
 Route::get('/sitemap', [SitemapController::class, 'generateSitemap']);
+Route::get('/symlink', function () {
+    Artisan::call('storage:link');
+});
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/admin', [DashboardController::class, 'index']);
