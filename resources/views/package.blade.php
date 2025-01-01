@@ -18,7 +18,7 @@
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($packages as $package)
           <a href="/packages/{{ $package->slug }}">
-            <div class="rounded-2xl bg-white transition duration-300 hover:shadow-lg md:p-4">
+            <div class="rounded-2xl bg-white transition duration-300 md:p-4 md:hover:shadow-lg">
               <img class="h-48 w-full rounded-lg object-cover"
                 src="{{ $package->image ? Storage::url($package->image) : asset('images/sunrise-gili-trawangan.webp') }}"
                 alt="{{ $package->name }}" loading="lazy" />
