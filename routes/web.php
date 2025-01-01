@@ -33,6 +33,8 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::put('/admin/sub-packages/{subPackage}', [SubPackagesController::class, 'update']);
     Route::delete('/admin/sub-packages/{subPackage}', [SubPackagesController::class, 'delete']);
 
-
+    Route::get('/admin/profile', [AuthController::class, 'profile']);
+    Route::post('/admin/profile', [AuthController::class, 'update']);
+    Route::post('/admin/profile/password', [AuthController::class, 'updatePassword']);
     Route::get('/admin/logout', [AuthController::class, 'logout']);
 });
