@@ -61,10 +61,22 @@ class SubPackagesController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable',
-            'package' => 'required'
+            'package' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10048',
         ]);
 
-        $subPackage->update($request->except('package'));
+        $imagePath = $subPackage->image;
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('packages', 'public'); // Simpan di storage/app/public/packages
+            if ($subPackage->image) {
+                Storage::disk('public')->delete($subPackage->image);
+            }
+        }
+
+        $subPackage->name = $request->name;
+        $subPackage->description = $request->description;
+        $subPackage->image = $imagePath;
         $package = Package::find($request->package);
         $save = $package->sub_packages()->save($subPackage);
 

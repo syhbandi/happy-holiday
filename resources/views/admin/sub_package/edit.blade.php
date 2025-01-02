@@ -12,7 +12,7 @@
   @enderror
 
   <form x-data="{ submit: false }" action="/admin/sub-packages/{{ $subPackage->id }}" method="POST"
-    @submit.prevent="submit = true; $el.submit()">
+    @submit.prevent="submit = true; $el.submit()" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="grid grid-cols-1 md:grid-cols-3">
@@ -30,6 +30,7 @@
             @endforeach
           </select>
         </div>
+        <x-input id="image" name="image" type="file" label="Gambar" />
 
         <div class="mt-2">
           <label class="mb-2 block font-medium" for="description">Deskripsi</label>
