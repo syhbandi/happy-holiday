@@ -14,7 +14,7 @@
   <main>
     {{-- breadcrumbs --}}
     <div class="container mx-auto max-w-6xl px-6 pt-12">
-      <div class="inline-flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <a class="font-medium text-primary hover:underline" href="/packages">Paket Tour</a>
         <ion-icon name="chevron-forward-outline"></ion-icon>
         {{ $package->name }}
@@ -59,9 +59,10 @@
         <div x-data="{ subs: {{ json_encode($package->sub_packages) }}, active: 0 }">
           <h3 class="mb-5 text-2xl font-semibold">Pilihan Paket</h3>
 
-          <div class="mb-3 flex items-center gap-3">
+          <div class="mb-3 flex gap-3 overflow-x-auto">
             <template x-for="(sub, index) in subs">
-              <button class="flex h-9 items-center justify-center rounded-lg px-5 font-medium" x-text="sub.name"
+              <button class="flex h-9 w-fit items-center justify-center text-nowrap rounded-lg px-5 font-medium"
+                x-text="sub.name"
                 :class="{ 'bg-primary text-white': active === index, 'bg-neutral-200': active !== index }"
                 :key="index" x-on:click="active = index">
               </button>
