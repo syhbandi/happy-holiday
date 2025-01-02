@@ -24,7 +24,10 @@
     <div class="space-y-5">
       @foreach ($subPackages as $sub)
         <x-card>
-          <div class="relative flex flex-wrap gap-5">
+          <div class="relative flex flex-col gap-5 md:flex-row">
+            <img class="h-32 w-full rounded-lg object-cover md:h-28 md:w-28"
+              src="{{ $sub->image ? Storage::url($sub->image) : asset('images/sunrise-gili-trawangan.webp') }}"
+              alt="{{ $sub->name }}" />
             <div>
               <h2 class="mb-2 text-xl font-semibold">{{ $sub->name }}</h2>
               <p class="mb-2 text-neutral-800">{{ $sub->package->name }}</p>

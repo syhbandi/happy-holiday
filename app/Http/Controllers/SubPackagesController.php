@@ -6,6 +6,7 @@ use App\Models\Package;
 use App\Models\SubPackage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class SubPackagesController extends Controller
@@ -33,14 +34,22 @@ class SubPackagesController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable',
-            'package' => 'required'
+            'package' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10048',
         ]);
 
-        $subPackage = new SubPackage($request->except('package'));
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('packages', 'public'); // Simpan di storage/app/public/packages
+        }
+
+        $subPackage = new SubPackage($request->except('package', 'image'));
+        $subPackage->image = $imagePath;
         $package = Package::find($request->package);
         $package->sub_packages()->save($subPackage);
 
         if (!$package) {
+            Storage::disk('public')->delete($imagePath);
             return redirect()->back()->withErrors(['status' => 'Gagal menambah sub paket!'])->withInput($request->all());
         }
 

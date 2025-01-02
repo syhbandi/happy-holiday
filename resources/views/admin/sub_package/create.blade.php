@@ -11,7 +11,8 @@
     <div class="mb-5 rounded-lg border border-red-600 bg-red-100 p-4">{{ $message }}</div>
   @enderror
 
-  <form x-data="{ submit: false }" action="/admin/sub-packages" method="POST" @submit.prevent="submit = true; $el.submit()">
+  <form x-data="{ submit: false }" action="/admin/sub-packages" method="POST" @submit.prevent="submit = true; $el.submit()"
+    enctype="multipart/form-data">
     @csrf
     <div class="grid grid-cols-1 md:grid-cols-3">
       <x-card class="col-span-2">
@@ -28,10 +29,11 @@
             @endforeach
           </select>
         </div>
+        <x-input id="image" name="image" type="file" label="Gambar" />
 
         <div class="mt-2">
           <label class="mb-2 block font-medium" for="description">Deskripsi</label>
-          <input id="description" name="description" type="hidden" />
+          <input id="description" name="description" type="hidden" value="{{ old('description') }}" />
           <trix-editor class="prose min-h-96 w-full rounded-lg border border-neutral-200 focus:border-primary"
             input="description"></trix-editor>
           <x-input-error name="description" />
